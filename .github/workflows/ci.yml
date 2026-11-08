@@ -36,6 +36,13 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      # 插件 main.py 与 remote_extensions 运行期由宿主注入 ECL.plugin_api；
+      # 独立 CI 用宿主仓库源码以 PYTHONPATH 提供同一 SDK。
+      - uses: actions/checkout@v4
+        with:
+          repository: ECLTeam/EuoraCraft-Launcher
+          ref: main
+          path: host
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -43,5 +50,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pytest pytest-asyncio pydantic
+          # 插件锁含 easytier-pyo3 等原生 wheel，全量哈希校验后安装
+          pip install --require-hashes -r locks/linux-x86_64-cp312.txt
       - name: Run tests
         run: python -m pytest --tb=short
+        env:
+          PYTHONPATH: ${{ github.workspace }}/host
