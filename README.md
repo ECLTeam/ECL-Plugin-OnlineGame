@@ -7,7 +7,6 @@ EuoraCraft Launcher 的联机普通插件：建房、加入、玩家管理、端
 | 插件标识 | `ECL-Plugin-OnlineGame` |
 | API 版本 | v2 Worker |
 | 版本 | `1.0.0-beta` |
-| 可选权限 | `ui.inject`、`instances.read`、`accounts.read` |
 | 宿主 | [EuoraCraft Launcher](https://github.com/ECLTeam/EuoraCraft-Launcher) |
 
 插件不声明对 `ECL-Plugin-QomicexCompatible` 的依赖：缺少它时基础联机仍可用，只是没有 QomicEX 扩展协议。
