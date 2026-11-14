@@ -7,3 +7,5 @@ venv/
 build/
 dist/
 *.eclplugin
+# package.py --download 生成的各平台依赖 wheel，属于本地构建产物
+wheels/
