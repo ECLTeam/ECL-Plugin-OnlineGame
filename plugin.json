@@ -6,7 +6,7 @@
   "description": "独立提供建房、加入、玩家管理、NAT 检测与节点设置，可选接入联机协议扩展。",
   "homepage": "https://github.com/ECLTeam/ECL-Plugin-OnlineGame",
   "license": "GPL-3.0",
-  "api_version": 2,
+  "api_version": 1,
   "entry_point": "main:Plugin",
   "pythonDependencies": [
     "easytier-pyo3==0.1.3",

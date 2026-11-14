@@ -19,8 +19,8 @@ from pathlib import Path
 from threading import RLock
 from uuid import uuid4
 
-from ECL.plugin_api import HostApiError, JsonValue
-from ECL.plugin_api import Plugin as BasePlugin
+from ECL.plugins.api import HostApiError, JsonValue
+from ECL.plugins.api import Plugin as BasePlugin
 
 from onlinegame.extensions import ConnectorExtensionRegistry
 from onlinegame.nodes import ConnectorNodeConfig

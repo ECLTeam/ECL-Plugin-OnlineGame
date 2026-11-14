@@ -17,7 +17,7 @@ import logging
 from functools import partial
 from uuid import uuid4
 
-from ECL.plugin_api import HostApiError
+from ECL.plugins.api import HostApiError
 
 from .extensions import ConnectorExtensionRegistry, ConnectorProtocolRequest, ConnectorSessionContext
 

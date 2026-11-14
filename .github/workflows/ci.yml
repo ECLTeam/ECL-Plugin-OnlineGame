@@ -36,7 +36,7 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
-      # 插件 main.py 与 remote_extensions 运行期由宿主注入 ECL.plugin_api；
+      # 插件 main.py 与 remote_extensions 运行期由宿主提供 ECL.plugins.api；
       # 独立 CI 用宿主仓库源码以 PYTHONPATH 提供同一 SDK。
       - uses: actions/checkout@v4
         with:

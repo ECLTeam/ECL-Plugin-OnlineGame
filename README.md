@@ -5,7 +5,7 @@ EuoraCraft Launcher 的联机普通插件：建房、加入、玩家管理、端
 | 项目 | 值 |
 | --- | --- |
 | 插件标识 | `ECL-Plugin-OnlineGame` |
-| API 版本 | v2 Worker |
+| API 版本 | 1（Worker） |
 | 版本 | `1.0.0-beta` |
 | 宿主 | [EuoraCraft Launcher](https://github.com/ECLTeam/EuoraCraft-Launcher) |
 
@@ -25,7 +25,7 @@ PYTHONPATH=/path/to/EuoraCraft-Launcher python package.py
 
 ## 开发
 
-插件运行在启动器提供的 Worker 环境中，`ECL.plugin_api` 由宿主注入，因此本仓库不包含该 SDK：
+插件运行在启动器提供的 Worker 环境中，`ECL.plugins.api` 由宿主提供，因此本仓库不包含该 SDK：
 
 ```bash
 pip install -r requirements-test.txt
